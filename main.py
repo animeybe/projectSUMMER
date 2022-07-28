@@ -24,8 +24,23 @@ class MainWindow(QMainWindow):
         self.BASE_CURRENCY = 'USD'
         self.DEFAULT_CURRENCY = ['RUB']
 
+        self.AVAILABLE_BASE_CURRENCIES = [
+            'USD','EUR','GBP','JPY','CHF'
+            ,'CAD','AUD','RUB', 'AED', 'CZK'
+            , 'CNY', 'PHP', 'SEK', 'MXN', 
+            'BYN', 'PLN', 'HKD', 'NOK', 'KRW'
+            , 'TRY', 'INR', 'BRL', 'ZAR'
+            ]
 
-        self.COLORS = ['Red', 'Blue', 'Green', 'Pink', 'Brown', 'Orange', "Yellow", 'Gray', 'Purple', 'Black', 'Lime', 'MediumSlateBlue', 'Maroon', 'Olive', 'Navy', 'Fuchsia', 'DarkSlateGray', 'Aqua', 'Teal', 'Chocolate', 'Silver', 'DeepSkyBlue', 'DarkMagenta']
+        self.COLORS = [
+            'Red', 'Blue', 'Green', 'Pink'
+            , 'Brown', 'Orange', "Yellow",
+            'Gray', 'Purple', 'Black', 'Lime',
+            'MediumSlateBlue', 'Maroon', 'Olive',
+            'Navy', 'Fuchsia', 'DarkSlateGray',
+            'Aqua', 'Teal', 'Chocolate', 'Silver',
+            'DeepSkyBlue', 'DarkMagenta'
+            ]
         
         self.main_currency.currentIndexChanged.connect(self.CheckboxEnabled)
         self.main_currency.currentIndexChanged.connect(self.crypto_upd)
@@ -230,4 +245,3 @@ if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = MainWindow()
     sys.exit(app.exec_())
-
