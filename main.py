@@ -39,9 +39,8 @@ class MainWindow(QMainWindow):
             'MediumSlateBlue', 'Maroon', 'Olive',
             'Navy', 'Fuchsia', 'DarkSlateGray',
             'Aqua', 'Teal', 'Chocolate', 'Silver',
-            'DeepSkyBlue', 'DarkMagenta'
-            ]
-        
+            'DeepSkyBlue', 'DarkMagenta']
+    
         self.main_currency.currentIndexChanged.connect(self.CheckboxEnabled)
         self.main_currency.currentIndexChanged.connect(self.crypto_upd)
         
@@ -82,7 +81,6 @@ class MainWindow(QMainWindow):
                 self.y[1] = max(Y)
             self.widget.plot(X, Y, name=f"RATE{i}", pen=pen)
             self.x += 1
-  
     
     def plot_upd(self):
         self.graphWidget.setXRange(self.x - 1, self.x, padding=0)
